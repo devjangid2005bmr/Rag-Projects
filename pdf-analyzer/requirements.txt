@@ -1,0 +1,77 @@
+# ==============================
+# LANGCHAIN CORE
+# ==============================
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langsmith
+
+# ==============================
+# LLM PROVIDERS
+# ==============================
+# OpenAI
+langchain-openai
+openai
+
+# Mistral
+langchain-mistralai
+mistralai
+# Google Gemini
+langchain-google-genai
+google-genai
+# ==============================
+# EMBEDDINGS
+# ==============================
+# OpenAI embeddings
+# Used if you want OpenAI embeddings for RAG
+tiktoken
+
+# ==============================
+# VECTOR DATABASE
+# ==============================
+# ChromaDB - local vector database
+langchain-chroma
+chromadb
+
+# ==============================
+# DOCUMENT LOADERS
+# ==============================
+pypdf
+docx2txt
+python-docx
+beautifulsoup4
+unstructured
+
+# ==============================
+# ENVIRONMENT VARIABLES
+# ==============================
+python-dotenv
+
+# ==============================
+# DATA / NUMERICAL
+# ==============================
+numpy
+pandas
+
+# ==============================
+# HTTP / API
+# ==============================
+requests
+httpx
+
+# ==============================
+# PYDANTIC
+# ==============================
+pydantic
+
+# ==============================
+# OPTIONAL: FASTAPI BACKEND
+# ==============================
+fastapi
+uvicorn[standard]
+
+# ==============================
+# OPTIONAL: STREAMLIT UI
+# ==============================
+streamlit
