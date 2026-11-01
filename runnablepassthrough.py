@@ -24,3 +24,26 @@ explain_prompt = ChatPromptTemplate.from_messages([
     ("system","you are a helpfull assistant who explain code in simple terms"),
     ("human","Explain the following code in simple simple words:\n{code}")
 ])
+
+
+
+# First chain: Generate code
+seq1 = code_prompt | model | parser
+
+# Second chain: Parallel execution
+seq2 = RunnableParallel({
+    "code": RunnablePassthrough(),
+    "explanation": explain_prompt | model | parser
+})
+
+# Final chain
+chain = seq1 | {
+    "code": RunnablePassthrough(),
+    "explanation": explain_prompt | model | parser
+}
+
+result = chain.invoke({
+    "topic": "write a code of palindrome in python"
+})
+
+print(result)
